@@ -70,8 +70,19 @@ can be checked without rerunning the experiments. Random states and experiment
 settings are recorded in the corresponding JSON files under
 `results/metrics/pacitan/`.
 
-## Software licensing
+## Licensing
 
-No separate software licence was present in the source project, so this release
-does not add a software licence grant. The Pacitan source data retain their
-CC BY 4.0 terms; the retired Bogor source data are linked but not redistributed.
+The original analysis software in `scripts/` is licensed under the MIT License
+in [`LICENSE`](LICENSE), copyright 2026 Kenan Firmansyah.
+
+The derived Pacitan modelling table, its provenance record, and the Pacitan
+experiment metrics are licensed under CC BY 4.0; see [`LICENSE-DATA`](LICENSE-DATA)
+for the exact file scope and attribution. These materials derive from Samodra
+et al.'s Pacitan benchmark, which is itself licensed CC BY 4.0.
+
+These grants do not cover the aggregate retired-dataset outputs in
+`results/metrics/revision_r1/` or `results/metrics/gate_comparison.json`; the
+underlying Bogor source repository states no licence, and its row-level files
+are not redistributed here. The Natural Earth boundary subset is public domain
+as described in `data/raw/naturalearth/SOURCE.md`. Other files retain their
+source terms or are not offered under these licence notices.
