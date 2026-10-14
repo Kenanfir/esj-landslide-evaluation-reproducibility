@@ -1,0 +1,140 @@
+{
+  "generated_utc": "2026-08-30T07:32:03+00:00",
+  "script": "scripts/pacitan_cv_experiment.py",
+  "input": "data/processed/pacitan_points.csv",
+  "n_records": 1485,
+  "n_positive": 743,
+  "n_folds": 4,
+  "n_spatial_blocks": 12,
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "distinct_spatial_partitions_across_seeds": 10,
+  "spatial_partitions_vary_across_seeds": true,
+  "note_on_the_wilcoxon_test": "the p-value here tests whether the random-minus-spatial gap is consistently positive across independently drawn spatial partitions of the same study area. It is not a population inference: one region, one trigger event, and the partitions share their underlying data. The gap distribution (mean, SD, range) carries the result; the p-value only reports sign consistency across partitions.",
+  "block_separation_per_seed": [
+    {
+      "seed": 42,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.16,
+      "mean_pairwise_km_between_block": 20.197,
+      "within_over_between": 0.2555,
+      "nn_same_block_rate": 0.9717,
+      "nn_same_block_chance": 0.0883
+    },
+    {
+      "seed": 1,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.154,
+      "mean_pairwise_km_between_block": 20.193,
+      "within_over_between": 0.2553,
+      "nn_same_block_rate": 0.971,
+      "nn_same_block_chance": 0.088
+    },
+    {
+      "seed": 2,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.168,
+      "mean_pairwise_km_between_block": 20.215,
+      "within_over_between": 0.2556,
+      "nn_same_block_rate": 0.9704,
+      "nn_same_block_chance": 0.0895
+    },
+    {
+      "seed": 3,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.156,
+      "mean_pairwise_km_between_block": 20.204,
+      "within_over_between": 0.2552,
+      "nn_same_block_rate": 0.9764,
+      "nn_same_block_chance": 0.0887
+    },
+    {
+      "seed": 4,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.157,
+      "mean_pairwise_km_between_block": 20.198,
+      "within_over_between": 0.2553,
+      "nn_same_block_rate": 0.9704,
+      "nn_same_block_chance": 0.0884
+    },
+    {
+      "seed": 5,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.223,
+      "mean_pairwise_km_between_block": 20.238,
+      "within_over_between": 0.2581,
+      "nn_same_block_rate": 0.9684,
+      "nn_same_block_chance": 0.0912
+    },
+    {
+      "seed": 6,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.161,
+      "mean_pairwise_km_between_block": 20.197,
+      "within_over_between": 0.2555,
+      "nn_same_block_rate": 0.9704,
+      "nn_same_block_chance": 0.0883
+    },
+    {
+      "seed": 7,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.158,
+      "mean_pairwise_km_between_block": 20.195,
+      "within_over_between": 0.2554,
+      "nn_same_block_rate": 0.971,
+      "nn_same_block_chance": 0.0882
+    },
+    {
+      "seed": 8,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.157,
+      "mean_pairwise_km_between_block": 20.207,
+      "within_over_between": 0.2552,
+      "nn_same_block_rate": 0.9791,
+      "nn_same_block_chance": 0.0889
+    },
+    {
+      "seed": 9,
+      "n_blocks": 12,
+      "mean_pairwise_km_within_block": 5.156,
+      "mean_pairwise_km_between_block": 20.195,
+      "within_over_between": 0.2553,
+      "nn_same_block_rate": 0.9778,
+      "nn_same_block_chance": 0.0882
+    }
+  ],
+  "features_continuous": [
+    "slope_deg",
+    "elevation_m",
+    "aspect_deg",
+    "plan_curvature",
+    "profile_curvature",
+    "terrain_wetness_index",
+    "stream_power_index",
+    "distance_to_river_m",
+    "distance_to_road_m"
+  ],
+  "features_categorical": [
+    "lithology_class",
+    "landuse_class"
+  ],
+  "categorical_encoding": "one-hot, unknown categories ignored",
+  "environment": {
+    "python": "3.13.11",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.8.0",
+    "xgboost": "3.2.0",
+    "scipy": "1.17.1"
+  }
+}

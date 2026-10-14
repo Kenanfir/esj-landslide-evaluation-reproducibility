@@ -1,0 +1,54 @@
+{
+  "generated_utc": "2026-08-31T08:06:45+00:00",
+  "script": "scripts/pacitan_blocking_sensitivity.py",
+  "n_records": 1485,
+  "n_folds": 4,
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "block_counts": [
+    4,
+    6,
+    8,
+    12,
+    20,
+    40,
+    80,
+    160
+  ],
+  "assignments": [
+    "round_robin",
+    "contiguous",
+    "leave_one_block_out"
+  ],
+  "random_baseline_auroc": [
+    {
+      "model": "Logistic Regression",
+      "random_auroc": 0.7212,
+      "random_auroc_pooled": 0.7207,
+      "random_nn_m": 512.3036
+    },
+    {
+      "model": "Random Forest",
+      "random_auroc": 0.7615,
+      "random_auroc_pooled": 0.7609,
+      "random_nn_m": 512.3036
+    },
+    {
+      "model": "XGBoost",
+      "random_auroc": 0.7384,
+      "random_auroc_pooled": 0.7384,
+      "random_nn_m": 512.3036
+    }
+  ],
+  "note": "mean_nearest_train_m is the mean distance from a held-out point to its nearest training point. It is the physical measure of how much separation the blocking bought, and the gap should be read against it rather than against the block count.",
+  "environment": {
+    "python": "3.13.11",
+    "scikit_learn": "1.8.0",
+    "xgboost": "3.2.0"
+  }
+}

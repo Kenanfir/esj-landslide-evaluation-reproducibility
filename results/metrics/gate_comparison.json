@@ -1,0 +1,605 @@
+{
+  "generated_utc": "2026-08-31T09:11:42+00:00",
+  "script": "scripts/gate_comparison.py",
+  "gate": "scripts/validate_dataset.py",
+  "datasets": {
+    "retired_as_assembled": {
+      "n_rows": 1011,
+      "verdict": "FAIL",
+      "failed_checks": [
+        "duplicate_rows",
+        "near_duplicate_neighbours_in_feature_space",
+        "grouping_variable_is_spatial"
+      ],
+      "duplicate_row_fraction": 0.5549,
+      "distinct_rows": 450,
+      "max_single_feature_separation": 0.5398,
+      "features_tested": 5,
+      "features_indistinguishable_from_uniform": 0,
+      "fraction_coincident_neighbours": 0.9594,
+      "nn_label_agreement": 0.9713,
+      "nn_label_agreement_chance": 0.5092,
+      "morans_i": 0.226914,
+      "morans_z": 15.4908,
+      "morans_p": 0.0,
+      "group_within_over_between": 0.9923,
+      "group_nn_same_rate": 0.9713,
+      "group_nn_same_chance": 0.2524
+    },
+    "retired_deduplicated": {
+      "n_rows": 450,
+      "verdict": "FAIL",
+      "failed_checks": [
+        "features_are_measurements_not_noise",
+        "grouping_variable_is_spatial"
+      ],
+      "duplicate_row_fraction": 0.0,
+      "distinct_rows": 450,
+      "max_single_feature_separation": 0.5414,
+      "features_tested": 5,
+      "features_indistinguishable_from_uniform": 4,
+      "fraction_coincident_neighbours": 0.0,
+      "nn_label_agreement": 0.5133,
+      "nn_label_agreement_chance": 0.538,
+      "morans_i": 0.010367,
+      "morans_z": 0.5105,
+      "morans_p": 0.6126,
+      "group_within_over_between": 1.001,
+      "group_nn_same_rate": 0.2689,
+      "group_nn_same_chance": 0.2509
+    },
+    "pacitan": {
+      "n_rows": 1485,
+      "verdict": "PASS",
+      "failed_checks": [],
+      "duplicate_row_fraction": 0.0,
+      "distinct_rows": 1485,
+      "max_single_feature_separation": 0.6797,
+      "features_tested": 11,
+      "features_indistinguishable_from_uniform": 0,
+      "fraction_coincident_neighbours": 0.0,
+      "nn_label_agreement": 0.6182,
+      "nn_label_agreement_chance": 0.5,
+      "morans_i": 0.279426,
+      "morans_z": 22.8244,
+      "morans_p": 0.0,
+      "group_within_over_between": null,
+      "group_nn_same_rate": null,
+      "group_nn_same_chance": null
+    }
+  },
+  "full_reports": {
+    "retired_as_assembled": {
+      "dataset": "results/metrics/_gate_tmp/retired_pool.csv",
+      "n_rows": 1011,
+      "label": "ground_truth",
+      "features": [
+        "stability",
+        "rainfall",
+        "vegetation",
+        "river_distance",
+        "slope"
+      ],
+      "verdict": "FAIL",
+      "failed_checks": [
+        "duplicate_rows",
+        "near_duplicate_neighbours_in_feature_space",
+        "grouping_variable_is_spatial"
+      ],
+      "checks": [
+        {
+          "check": "duplicate_rows",
+          "n_rows": 1011,
+          "exact_duplicate_rows": 475,
+          "duplicate_rows_at_6dp": 561,
+          "duplicate_row_fraction": 0.5549,
+          "distinct_rows": 450,
+          "threshold": 0.02,
+          "status": "FAIL"
+        },
+        {
+          "check": "single_feature_label_leakage",
+          "per_feature": [
+            {
+              "feature": "stability",
+              "univariate_auroc": 0.4602,
+              "separation": 0.5398,
+              "pearson_r": -0.07
+            },
+            {
+              "feature": "rainfall",
+              "univariate_auroc": 0.5154,
+              "separation": 0.5154,
+              "pearson_r": 0.0257
+            },
+            {
+              "feature": "vegetation",
+              "univariate_auroc": 0.5101,
+              "separation": 0.5101,
+              "pearson_r": 0.0178
+            },
+            {
+              "feature": "river_distance",
+              "univariate_auroc": 0.5294,
+              "separation": 0.5294,
+              "pearson_r": 0.0476
+            },
+            {
+              "feature": "slope",
+              "univariate_auroc": 0.4819,
+              "separation": 0.5181,
+              "pearson_r": -0.0385
+            }
+          ],
+          "max_separation": 0.5398,
+          "threshold": 0.98,
+          "status": "PASS",
+          "note": "separation is max(AUROC, 1-AUROC): a perfectly inverted predictor leaks exactly as much as a perfectly aligned one"
+        },
+        {
+          "check": "features_are_measurements_not_noise",
+          "per_feature": [
+            {
+              "feature": "stability",
+              "observed_min": 0.2028,
+              "observed_max": 0.6992,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.074,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "rainfall",
+              "observed_min": 4502.9654,
+              "observed_max": 6492.3158,
+              "distinct_values": 468,
+              "ks_p_vs_uniform": 0.05,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "vegetation",
+              "observed_min": 0.2009,
+              "observed_max": 0.6,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.1178,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "river_distance",
+              "observed_min": 5.0291,
+              "observed_max": 49.9447,
+              "distinct_values": 474,
+              "ks_p_vs_uniform": 0.003,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "slope",
+              "observed_min": 5.0727,
+              "observed_max": 34.9831,
+              "distinct_values": 483,
+              "ks_p_vs_uniform": 0.0433,
+              "indistinguishable_from_uniform": false
+            }
+          ],
+          "features_indistinguishable_from_uniform": 0,
+          "features_tested": 5,
+          "threshold": "more than half of the features uniform at p > 0.2",
+          "status": "PASS",
+          "note": "real terrain and climate covariates are skewed; a full set of predictors that each match a uniform draw over a round interval is a generated file, not a measured one"
+        },
+        {
+          "check": "near_duplicate_neighbours_in_feature_space",
+          "min_nn_distance": 0.0,
+          "median_nn_distance": 0.0,
+          "fraction_nn_distance_below_1e-6": 0.9594,
+          "nn_label_agreement": 0.9713,
+          "nn_label_agreement_chance": 0.5092,
+          "threshold": 0.1,
+          "status": "FAIL",
+          "note": "a high rate of coincident neighbours means random K-fold will put the same record on both sides of the split"
+        },
+        {
+          "check": "label_spatial_autocorrelation",
+          "morans_i": 0.226914,
+          "expected_under_null": -0.00099,
+          "z_score_permutation": 15.4908,
+          "p_two_sided_permutation": 0.0,
+          "permutations": 999,
+          "k_nearest_neighbours": 8,
+          "status": "INFO",
+          "note": "informational, not pass/fail: this is the condition that makes spatial cross-validation necessary, so a near-zero I means the spatial-CV argument does not apply to this data"
+        },
+        {
+          "check": "grouping_variable_is_spatial",
+          "mean_pairwise_km_within_group": 161.373,
+          "mean_pairwise_km_between_group": 162.618,
+          "within_over_between": 0.9923,
+          "nn_same_group_rate": 0.9713,
+          "nn_same_group_chance": 0.2524,
+          "n_groups": 4,
+          "threshold": 0.9,
+          "status": "FAIL",
+          "note": "grouped K-fold only blocks on space when the groups are spatially separated; a ratio near 1.0 means the groups are interleaved and the fold structure carries no spatial meaning"
+        }
+      ]
+    },
+    "retired_deduplicated": {
+      "dataset": "results/metrics/_gate_tmp/retired_dedup.csv",
+      "n_rows": 450,
+      "label": "ground_truth",
+      "features": [
+        "stability",
+        "rainfall",
+        "vegetation",
+        "river_distance",
+        "slope"
+      ],
+      "verdict": "FAIL",
+      "failed_checks": [
+        "features_are_measurements_not_noise",
+        "grouping_variable_is_spatial"
+      ],
+      "checks": [
+        {
+          "check": "duplicate_rows",
+          "n_rows": 450,
+          "exact_duplicate_rows": 0,
+          "duplicate_rows_at_6dp": 0,
+          "duplicate_row_fraction": 0.0,
+          "distinct_rows": 450,
+          "threshold": 0.02,
+          "status": "PASS"
+        },
+        {
+          "check": "single_feature_label_leakage",
+          "per_feature": [
+            {
+              "feature": "stability",
+              "univariate_auroc": 0.4866,
+              "separation": 0.5134,
+              "pearson_r": -0.0236
+            },
+            {
+              "feature": "rainfall",
+              "univariate_auroc": 0.4996,
+              "separation": 0.5004,
+              "pearson_r": -0.0014
+            },
+            {
+              "feature": "vegetation",
+              "univariate_auroc": 0.4987,
+              "separation": 0.5013,
+              "pearson_r": -0.0027
+            },
+            {
+              "feature": "river_distance",
+              "univariate_auroc": 0.5414,
+              "separation": 0.5414,
+              "pearson_r": 0.0655
+            },
+            {
+              "feature": "slope",
+              "univariate_auroc": 0.4703,
+              "separation": 0.5297,
+              "pearson_r": -0.0555
+            }
+          ],
+          "max_separation": 0.5414,
+          "threshold": 0.98,
+          "status": "PASS",
+          "note": "separation is max(AUROC, 1-AUROC): a perfectly inverted predictor leaks exactly as much as a perfectly aligned one"
+        },
+        {
+          "check": "features_are_measurements_not_noise",
+          "per_feature": [
+            {
+              "feature": "stability",
+              "observed_min": 0.2028,
+              "observed_max": 0.6992,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.9913,
+              "indistinguishable_from_uniform": true
+            },
+            {
+              "feature": "rainfall",
+              "observed_min": 4502.9654,
+              "observed_max": 6492.3158,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.8185,
+              "indistinguishable_from_uniform": true
+            },
+            {
+              "feature": "vegetation",
+              "observed_min": 0.2009,
+              "observed_max": 0.6,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.8516,
+              "indistinguishable_from_uniform": true
+            },
+            {
+              "feature": "river_distance",
+              "observed_min": 5.0291,
+              "observed_max": 49.9447,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.1238,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "slope",
+              "observed_min": 5.0727,
+              "observed_max": 34.9831,
+              "distinct_values": 450,
+              "ks_p_vs_uniform": 0.3791,
+              "indistinguishable_from_uniform": true
+            }
+          ],
+          "features_indistinguishable_from_uniform": 4,
+          "features_tested": 5,
+          "threshold": "more than half of the features uniform at p > 0.2",
+          "status": "FAIL",
+          "note": "real terrain and climate covariates are skewed; a full set of predictors that each match a uniform draw over a round interval is a generated file, not a measured one"
+        },
+        {
+          "check": "near_duplicate_neighbours_in_feature_space",
+          "min_nn_distance": 0.225928,
+          "median_nn_distance": 0.733762,
+          "fraction_nn_distance_below_1e-6": 0.0,
+          "nn_label_agreement": 0.5133,
+          "nn_label_agreement_chance": 0.538,
+          "threshold": 0.1,
+          "status": "PASS",
+          "note": "a high rate of coincident neighbours means random K-fold will put the same record on both sides of the split"
+        },
+        {
+          "check": "label_spatial_autocorrelation",
+          "morans_i": 0.010367,
+          "expected_under_null": -0.002227,
+          "z_score_permutation": 0.5105,
+          "p_two_sided_permutation": 0.6126,
+          "permutations": 999,
+          "k_nearest_neighbours": 8,
+          "status": "INFO",
+          "note": "informational, not pass/fail: this is the condition that makes spatial cross-validation necessary, so a near-zero I means the spatial-CV argument does not apply to this data"
+        },
+        {
+          "check": "grouping_variable_is_spatial",
+          "mean_pairwise_km_within_group": 163.998,
+          "mean_pairwise_km_between_group": 163.84,
+          "within_over_between": 1.001,
+          "nn_same_group_rate": 0.2689,
+          "nn_same_group_chance": 0.2509,
+          "n_groups": 4,
+          "threshold": 0.9,
+          "status": "FAIL",
+          "note": "grouped K-fold only blocks on space when the groups are spatially separated; a ratio near 1.0 means the groups are interleaved and the fold structure carries no spatial meaning"
+        }
+      ]
+    },
+    "pacitan": {
+      "dataset": "data/processed/pacitan_points.csv",
+      "n_rows": 1485,
+      "label": "landslide",
+      "features": [
+        "slope_deg",
+        "elevation_m",
+        "aspect_deg",
+        "plan_curvature",
+        "profile_curvature",
+        "terrain_wetness_index",
+        "stream_power_index",
+        "distance_to_river_m",
+        "distance_to_road_m",
+        "lithology_class",
+        "landuse_class"
+      ],
+      "verdict": "PASS",
+      "failed_checks": [],
+      "checks": [
+        {
+          "check": "duplicate_rows",
+          "n_rows": 1485,
+          "exact_duplicate_rows": 0,
+          "duplicate_rows_at_6dp": 0,
+          "duplicate_row_fraction": 0.0,
+          "distinct_rows": 1485,
+          "threshold": 0.02,
+          "status": "PASS"
+        },
+        {
+          "check": "single_feature_label_leakage",
+          "per_feature": [
+            {
+              "feature": "slope_deg",
+              "univariate_auroc": 0.6797,
+              "separation": 0.6797,
+              "pearson_r": 0.3051
+            },
+            {
+              "feature": "elevation_m",
+              "univariate_auroc": 0.5329,
+              "separation": 0.5329,
+              "pearson_r": 0.0675
+            },
+            {
+              "feature": "aspect_deg",
+              "univariate_auroc": 0.39,
+              "separation": 0.61,
+              "pearson_r": -0.184
+            },
+            {
+              "feature": "plan_curvature",
+              "univariate_auroc": 0.4459,
+              "separation": 0.5541,
+              "pearson_r": -0.0231
+            },
+            {
+              "feature": "profile_curvature",
+              "univariate_auroc": 0.4759,
+              "separation": 0.5241,
+              "pearson_r": -0.0302
+            },
+            {
+              "feature": "terrain_wetness_index",
+              "univariate_auroc": 0.4577,
+              "separation": 0.5423,
+              "pearson_r": -0.147
+            },
+            {
+              "feature": "stream_power_index",
+              "univariate_auroc": 0.6495,
+              "separation": 0.6495,
+              "pearson_r": 0.182
+            },
+            {
+              "feature": "distance_to_river_m",
+              "univariate_auroc": 0.4202,
+              "separation": 0.5798,
+              "pearson_r": -0.1816
+            },
+            {
+              "feature": "distance_to_road_m",
+              "univariate_auroc": 0.4953,
+              "separation": 0.5047,
+              "pearson_r": -0.0186
+            },
+            {
+              "feature": "lithology_class",
+              "univariate_auroc": 0.5274,
+              "separation": 0.5274,
+              "pearson_r": 0.0673
+            },
+            {
+              "feature": "landuse_class",
+              "univariate_auroc": 0.4993,
+              "separation": 0.5007,
+              "pearson_r": -0.0058
+            }
+          ],
+          "max_separation": 0.6797,
+          "threshold": 0.98,
+          "status": "PASS",
+          "note": "separation is max(AUROC, 1-AUROC): a perfectly inverted predictor leaks exactly as much as a perfectly aligned one"
+        },
+        {
+          "check": "features_are_measurements_not_noise",
+          "per_feature": [
+            {
+              "feature": "slope_deg",
+              "observed_min": 0.6,
+              "observed_max": 46.0,
+              "distinct_values": 369,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "elevation_m",
+              "observed_min": -5.4,
+              "observed_max": 1163.1,
+              "distinct_values": 1367,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "aspect_deg",
+              "observed_min": 0.0,
+              "observed_max": 360.0,
+              "distinct_values": 1219,
+              "ks_p_vs_uniform": 0.0002,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "plan_curvature",
+              "observed_min": -0.249,
+              "observed_max": 0.211,
+              "distinct_values": 170,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "profile_curvature",
+              "observed_min": -0.025,
+              "observed_max": 0.018,
+              "distinct_values": 35,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "terrain_wetness_index",
+              "observed_min": 3.06,
+              "observed_max": 22.37,
+              "distinct_values": 504,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "stream_power_index",
+              "observed_min": -5.956,
+              "observed_max": 4.079,
+              "distinct_values": 1037,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "distance_to_river_m",
+              "observed_min": 0.1,
+              "observed_max": 5230.7002,
+              "distinct_values": 455,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "distance_to_road_m",
+              "observed_min": 0.1,
+              "observed_max": 2021.2,
+              "distinct_values": 495,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "lithology_class",
+              "observed_min": 2.0,
+              "observed_max": 32.0,
+              "distinct_values": 13,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            },
+            {
+              "feature": "landuse_class",
+              "observed_min": 1.0,
+              "observed_max": 13.0,
+              "distinct_values": 11,
+              "ks_p_vs_uniform": 0.0,
+              "indistinguishable_from_uniform": false
+            }
+          ],
+          "features_indistinguishable_from_uniform": 0,
+          "features_tested": 11,
+          "threshold": "more than half of the features uniform at p > 0.2",
+          "status": "PASS",
+          "note": "real terrain and climate covariates are skewed; a full set of predictors that each match a uniform draw over a round interval is a generated file, not a measured one"
+        },
+        {
+          "check": "near_duplicate_neighbours_in_feature_space",
+          "min_nn_distance": 0.376365,
+          "median_nn_distance": 1.198015,
+          "fraction_nn_distance_below_1e-6": 0.0,
+          "nn_label_agreement": 0.6182,
+          "nn_label_agreement_chance": 0.5,
+          "threshold": 0.1,
+          "status": "PASS",
+          "note": "a high rate of coincident neighbours means random K-fold will put the same record on both sides of the split"
+        },
+        {
+          "check": "label_spatial_autocorrelation",
+          "morans_i": 0.279426,
+          "expected_under_null": -0.000674,
+          "z_score_permutation": 22.8244,
+          "p_two_sided_permutation": 0.0,
+          "permutations": 999,
+          "k_nearest_neighbours": 8,
+          "status": "INFO",
+          "note": "informational, not pass/fail: this is the condition that makes spatial cross-validation necessary, so a near-zero I means the spatial-CV argument does not apply to this data"
+        }
+      ]
+    }
+  }
+}

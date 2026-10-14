@@ -1,0 +1,5 @@
+points_per_polygon,n_records,positive_duplicate_fraction,negative_duplicate_fraction,sliver_fallbacks,random_cv_auroc,random_cv_sd,spatial_cv_auroc,spatial_cv_sd,spatial_rr12_auroc,spatial_rr12_sd,lolo_auroc,lolo_sd,gap
+1,1484.2,0.0,0.0011,0.0,0.7534,0.0085,0.6472,0.0099,0.6991,0.0126,0.7601,0.0079,0.1061
+3,4448.4,0.1961,0.0025,0.0,0.8912,0.0035,0.6502,0.0065,0.705,0.0107,0.7733,0.005,0.2409
+5,7414.8,0.3103,0.0082,0.0,0.9319,0.0034,0.6466,0.013,0.7041,0.0097,0.7769,0.0063,0.2853
+10,14829.6,0.4892,0.0181,0.0,0.9667,0.001,0.653,0.0068,0.7062,0.008,0.7825,0.004,0.3137

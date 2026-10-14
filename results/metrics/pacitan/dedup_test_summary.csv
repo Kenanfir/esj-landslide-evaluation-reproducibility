@@ -1,0 +1,9 @@
+points_per_polygon,pool,n_records,random_cv_auroc,spatial_cv_auroc,random_nearest_train_m
+1,as sampled,1485.0,0.7484,0.6432,459.5667
+1,de-duplicated,1484.3333,0.7475,0.6531,458.6667
+3,as sampled,4448.3333,0.8903,0.6518,202.6
+3,de-duplicated,4218.0,0.8635,0.6543,216.2667
+5,as sampled,7415.0,0.9307,0.6445,159.0333
+5,de-duplicated,6743.0,0.8984,0.6405,175.5
+10,as sampled,14826.6667,0.9672,0.6564,114.6333
+10,de-duplicated,12498.3333,0.9368,0.6486,137.2

@@ -1,0 +1,14 @@
+{
+  "1": {
+    "pooled_mean_m": 446.8,
+    "landslide_mean_m": 316.5,
+    "landslide_median_m": 244.4,
+    "non_landslide_mean_m": 577.1
+  },
+  "10": {
+    "pooled_mean_m": 114.7,
+    "landslide_mean_m": 8.5,
+    "landslide_median_m": 5.6,
+    "non_landslide_mean_m": 220.9
+  }
+}

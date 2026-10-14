@@ -1,0 +1,7 @@
+model,regime,auroc,auroc_sd,f1
+Logistic Regression,random,0.7217,0.0043,0.6736
+Logistic Regression,spatial,0.6894,0.0063,0.6215
+Random Forest,random,0.7633,0.0038,0.6999
+Random Forest,spatial,0.7261,0.0047,0.6481
+XGBoost,random,0.7381,0.0061,0.6795
+XGBoost,spatial,0.7028,0.0073,0.6282

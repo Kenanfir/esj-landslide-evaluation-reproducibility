@@ -1,0 +1,61 @@
+pool,model,regime,seed,auroc_mean_over_folds
+pool_1011,Logistic Regression,random,42,0.519834
+pool_1011,Random Forest,random,42,0.961146
+pool_1011,XGBoost,random,42,0.942046
+pool_1011,Logistic Regression,spatial,42,0.521199
+pool_1011,Random Forest,spatial,42,0.594335
+pool_1011,XGBoost,spatial,42,0.563739
+pool_1011,Logistic Regression,random,1,0.51924
+pool_1011,Random Forest,random,1,0.954241
+pool_1011,XGBoost,random,1,0.926228
+pool_1011,Logistic Regression,spatial,1,0.521199
+pool_1011,Random Forest,spatial,1,0.588979
+pool_1011,XGBoost,spatial,1,0.563739
+pool_1011,Logistic Regression,random,2,0.531849
+pool_1011,Random Forest,random,2,0.968201
+pool_1011,XGBoost,random,2,0.954425
+pool_1011,Logistic Regression,spatial,2,0.521199
+pool_1011,Random Forest,spatial,2,0.591896
+pool_1011,XGBoost,spatial,2,0.563739
+pool_1011,Logistic Regression,random,3,0.545873
+pool_1011,Random Forest,random,3,0.969712
+pool_1011,XGBoost,random,3,0.950561
+pool_1011,Logistic Regression,spatial,3,0.521199
+pool_1011,Random Forest,spatial,3,0.591116
+pool_1011,XGBoost,spatial,3,0.563739
+pool_1011,Logistic Regression,random,4,0.537509
+pool_1011,Random Forest,random,4,0.973869
+pool_1011,XGBoost,random,4,0.955148
+pool_1011,Logistic Regression,spatial,4,0.521199
+pool_1011,Random Forest,spatial,4,0.588358
+pool_1011,XGBoost,spatial,4,0.563739
+dedup,Logistic Regression,random,42,0.516414
+dedup,Random Forest,random,42,0.532108
+dedup,XGBoost,random,42,0.526712
+dedup,Logistic Regression,spatial,42,0.519739
+dedup,Random Forest,spatial,42,0.556496
+dedup,XGBoost,spatial,42,0.547108
+dedup,Logistic Regression,random,1,0.465753
+dedup,Random Forest,random,1,0.513149
+dedup,XGBoost,random,1,0.517222
+dedup,Logistic Regression,spatial,1,0.519739
+dedup,Random Forest,spatial,1,0.558645
+dedup,XGBoost,spatial,1,0.547108
+dedup,Logistic Regression,random,2,0.511955
+dedup,Random Forest,random,2,0.533326
+dedup,XGBoost,random,2,0.540196
+dedup,Logistic Regression,spatial,2,0.519739
+dedup,Random Forest,spatial,2,0.55305
+dedup,XGBoost,spatial,2,0.547108
+dedup,Logistic Regression,random,3,0.494296
+dedup,Random Forest,random,3,0.525082
+dedup,XGBoost,random,3,0.522844
+dedup,Logistic Regression,spatial,3,0.519739
+dedup,Random Forest,spatial,3,0.552737
+dedup,XGBoost,spatial,3,0.547108
+dedup,Logistic Regression,random,4,0.475374
+dedup,Random Forest,random,4,0.522
+dedup,XGBoost,random,4,0.514615
+dedup,Logistic Regression,spatial,4,0.519739
+dedup,Random Forest,spatial,4,0.558407
+dedup,XGBoost,spatial,4,0.547108

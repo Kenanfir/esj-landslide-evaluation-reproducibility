@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-08-31T08:13:11+00:00",
+  "script": "scripts/pacitan_dedup_test.py",
+  "question": "does removing exact duplicates undo the random-CV inflation, or is the inflation carried by near-duplicates the duplicate-fraction statistic would not catch?",
+  "random_cv_by_pool": {
+    "1": {
+      "as_sampled": 0.7484,
+      "de_duplicated": 0.7475
+    },
+    "3": {
+      "as_sampled": 0.8903,
+      "de_duplicated": 0.8635
+    },
+    "5": {
+      "as_sampled": 0.9307,
+      "de_duplicated": 0.8984
+    },
+    "10": {
+      "as_sampled": 0.9672,
+      "de_duplicated": 0.9368
+    }
+  },
+  "recovered_fraction_at_k10": 0.1389
+}

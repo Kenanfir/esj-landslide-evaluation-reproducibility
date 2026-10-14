@@ -1,0 +1,25 @@
+{
+  "compactness_limit": 0.8,
+  "restricted": {
+    "n_partitions": 10,
+    "correlation_separation_gap": -0.0884,
+    "correlation_dropping_most_separated": 0.4133,
+    "most_separated_n_blocks": 4,
+    "separation_sd_m": 702.0,
+    "gap_min": 0.063,
+    "gap_max": 0.114,
+    "n_labelled_contiguous": 7
+  },
+  "full_sweep": {
+    "n_partitions": 16,
+    "separation_sd_m": 1474.0
+  },
+  "leg_three_decomposition_at_k10": {
+    "random_cv": 0.9667,
+    "leave_one_landslide_out": 0.7825,
+    "blocked_by_region": 0.653,
+    "pseudo_replication_step": 0.184,
+    "regional_extrapolation_step": 0.129
+  },
+  "grouping_removes_fraction_of_inflation": 0.895
+}

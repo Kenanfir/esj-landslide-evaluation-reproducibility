@@ -1,0 +1,43 @@
+{
+  "generated_utc": "2026-08-30T07:43:35+00:00",
+  "script": "scripts/pacitan_replication_audit.py",
+  "published_comparison": {
+    "source": "Samodra & Nugroho, doi:10.21203/rs.3.rs-1441095/v1 (published as Artificial Intelligence in Geosciences, doi:10.1016/j.aiig.2024.100093)",
+    "strategy": "Center",
+    "cv_nonspatial_tuning": {
+      "accuracy": 0.7,
+      "kappa": 0.39,
+      "auroc": 0.74
+    },
+    "cv_llo_spatial_tuning": {
+      "accuracy": 0.69,
+      "kappa": 0.38,
+      "auroc": 0.74
+    },
+    "cv_llo_ffs_no_tuning": {
+      "accuracy": 0.7,
+      "kappa": 0.41,
+      "auroc": 0.73
+    },
+    "multi_point_strategies_auroc_range": [
+      0.86,
+      0.98
+    ]
+  },
+  "our_result_under_published_design": {
+    "design": "Random Forest, 10-fold random CV vs 10 k-means spatial partitions",
+    "random_auroc_mean_per_fold": 0.7693,
+    "spatial_auroc_mean_per_fold": 0.6804,
+    "random_auroc_pooled": 0.7677,
+    "spatial_auroc_pooled": 0.7036,
+    "gap_mean_per_fold": 0.0889,
+    "gap_pooled": 0.0641
+  },
+  "best_spatial_auroc_over_tuning_grid": {
+    "mean_per_fold": 0.6864,
+    "pooled": 0.7085,
+    "smallest_gap_mean_per_fold": 0.0603,
+    "smallest_gap_pooled": 0.0384
+  },
+  "unresolved": "our spatial-CV AUROC (0.68 per-fold, 0.70 pooled) does not reproduce the 0.74 the source authors report for the same inventory strategy. Neither the aggregation choice nor a 16-point hyperparameter sweep closes it. The remaining candidates are their R/ranger implementation and the exact sperrorest partitioning, neither of which is recoverable from the deposit. Reported as an open discrepancy."
+}

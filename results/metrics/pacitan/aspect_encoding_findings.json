@@ -1,0 +1,30 @@
+{
+  "generated_utc": "2026-08-30T11:35:22+00:00",
+  "script": "scripts/pacitan_aspect_encoding.py",
+  "question": "does a circular encoding of aspect change any conclusion?",
+  "design": "12 k-means blocks round robin into 4 folds, 5 seeds",
+  "rf_over_lr_margin_random": {
+    "linear": 0.0403,
+    "sin_cos": 0.0133
+  },
+  "logistic_regression_change": {
+    "random": 0.0233,
+    "spatial": 0.0297
+  },
+  "gap_by_encoding": {
+    "linear": {
+      "Logistic Regression": 0.0325,
+      "Random Forest": 0.0337,
+      "XGBoost": 0.0338
+    },
+    "sin_cos": {
+      "Logistic Regression": 0.0261,
+      "Random Forest": 0.0298,
+      "XGBoost": 0.0334
+    }
+  },
+  "environment": {
+    "python": "3.13.11",
+    "scikit_learn": "1.8.0"
+  }
+}

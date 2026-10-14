@@ -1,0 +1,61 @@
+encoding,regime,seed,model,auroc
+linear,random,42,Logistic Regression,0.719023
+linear,random,42,Random Forest,0.765831
+linear,random,42,XGBoost,0.745434
+linear,spatial,42,Logistic Regression,0.690038
+linear,spatial,42,Random Forest,0.726806
+linear,spatial,42,XGBoost,0.705192
+linear,random,1,Logistic Regression,0.713395
+linear,random,1,Random Forest,0.75514
+linear,random,1,XGBoost,0.73056
+linear,spatial,1,Logistic Regression,0.682668
+linear,spatial,1,Random Forest,0.724942
+linear,spatial,1,XGBoost,0.702372
+linear,random,2,Logistic Regression,0.726153
+linear,random,2,Random Forest,0.761613
+linear,random,2,XGBoost,0.745072
+linear,spatial,2,Logistic Regression,0.688569
+linear,spatial,2,Random Forest,0.727051
+linear,spatial,2,XGBoost,0.709964
+linear,random,3,Logistic Regression,0.722997
+linear,random,3,Random Forest,0.761728
+linear,random,3,XGBoost,0.731789
+linear,spatial,3,Logistic Regression,0.69457
+linear,spatial,3,Random Forest,0.73404
+linear,spatial,3,XGBoost,0.701817
+linear,random,4,Logistic Regression,0.724352
+linear,random,4,Random Forest,0.763194
+linear,random,4,XGBoost,0.741878
+linear,spatial,4,Logistic Regression,0.687671
+linear,spatial,4,Random Forest,0.726171
+linear,spatial,4,XGBoost,0.706359
+sin_cos,random,42,Logistic Regression,0.743208
+sin_cos,random,42,Random Forest,0.754766
+sin_cos,random,42,XGBoost,0.738908
+sin_cos,spatial,42,Logistic Regression,0.719591
+sin_cos,spatial,42,Random Forest,0.729361
+sin_cos,spatial,42,XGBoost,0.707166
+sin_cos,random,1,Logistic Regression,0.735741
+sin_cos,random,1,Random Forest,0.750587
+sin_cos,random,1,XGBoost,0.724698
+sin_cos,spatial,1,Logistic Regression,0.714462
+sin_cos,spatial,1,Random Forest,0.727815
+sin_cos,spatial,1,XGBoost,0.697318
+sin_cos,random,2,Logistic Regression,0.748405
+sin_cos,random,2,Random Forest,0.761701
+sin_cos,random,2,XGBoost,0.7436
+sin_cos,spatial,2,Logistic Regression,0.716722
+sin_cos,spatial,2,Random Forest,0.733572
+sin_cos,spatial,2,XGBoost,0.701079
+sin_cos,random,3,Logistic Regression,0.746658
+sin_cos,random,3,Random Forest,0.759787
+sin_cos,random,3,XGBoost,0.724699
+sin_cos,spatial,3,Logistic Regression,0.722825
+sin_cos,spatial,3,Random Forest,0.727347
+sin_cos,spatial,3,XGBoost,0.6987
+sin_cos,random,4,Logistic Regression,0.748605
+sin_cos,random,4,Random Forest,0.762396
+sin_cos,random,4,XGBoost,0.740079
+sin_cos,spatial,4,Logistic Regression,0.718252
+sin_cos,spatial,4,Random Forest,0.721785
+sin_cos,spatial,4,XGBoost,0.700832

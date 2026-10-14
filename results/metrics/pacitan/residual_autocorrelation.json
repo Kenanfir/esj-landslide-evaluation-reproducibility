@@ -1,0 +1,34 @@
+{
+  "generated_utc": "2026-08-31T01:27:16+00:00",
+  "script": "scripts/pacitan_residual_autocorrelation.py",
+  "question": "does spatial structure survive in the residuals, or is the label's autocorrelation an artefact of presence/pseudo-absence sampling?",
+  "label": {
+    "morans_i": 0.279426,
+    "z": 22.8244,
+    "p_two_sided": 0.0,
+    "k": 8,
+    "permutations": 999,
+    "n": 1485
+  },
+  "out_of_fold_residual": {
+    "morans_i": 0.16087,
+    "z": 12.9614,
+    "p_two_sided": 0.0,
+    "k": 8,
+    "permutations": 999,
+    "n": 1485
+  },
+  "predicted_probability": {
+    "morans_i": 0.423133,
+    "z": 36.6112,
+    "p_two_sided": 0.0,
+    "k": 8,
+    "permutations": 999,
+    "n": 1485
+  },
+  "note": "the label statistic is partly guaranteed by the sampling design; the residual statistic is not, because it asks what spatial structure the covariates failed to explain",
+  "environment": {
+    "python": "3.13.11",
+    "scikit_learn": "1.8.0"
+  }
+}

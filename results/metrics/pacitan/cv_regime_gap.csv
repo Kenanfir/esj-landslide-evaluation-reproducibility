@@ -1,0 +1,4 @@
+model,n_partitions,random_auroc_mean,spatial_auroc_mean,gap_mean,gap_sd,gap_min,gap_max,gap_median,wilcoxon_statistic,wilcoxon_p_one_sided
+Logistic Regression,10,0.7217,0.6894,0.0323,0.0069,0.0161,0.0392,0.0332,55.0,0.0009765625
+Random Forest,10,0.7633,0.7261,0.0373,0.0066,0.0265,0.049,0.0376,55.0,0.0009765625
+XGBoost,10,0.7381,0.7028,0.0354,0.0104,0.0204,0.0538,0.0368,55.0,0.0009765625

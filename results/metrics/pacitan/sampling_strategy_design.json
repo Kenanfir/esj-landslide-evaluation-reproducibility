@@ -1,0 +1,42 @@
+{
+  "generated_utc": "2026-08-31T09:08:28+00:00",
+  "script": "scripts/pacitan_sampling_experiment.py",
+  "strategies_points_per_polygon": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_folds": 10,
+  "blocking_designs": {
+    "primary": "leave-one-block-out over 10 k-means blocks (the source study's scheme)",
+    "secondary": "12 k-means blocks assigned round robin to 4 folds",
+    "leave_one_landslide_out": "folds grouped by the polygon each point came from, negatives in singleton groups; separates within-failure pseudo-replication from regional extrapolation, which spatial blocking confounds"
+  },
+  "duplicate_fraction_definition": "fraction of points sharing their 11-factor vector with at least one other point of the same class (pandas keep=False)",
+  "model": "RandomForestClassifier(n_estimators=300)",
+  "negative_sampling": "uniform over cells the elevation raster covers, rejecting any cell inside a landslide polygon, matched one-to-one to the positive count",
+  "published_claim": {
+    "source": "Samodra & Nugroho, doi:10.1016/j.aiig.2024.100093",
+    "one_point_strategies_auroc": [
+      0.7,
+      0.78
+    ],
+    "multi_point_strategies_auroc": [
+      0.86,
+      0.98
+    ]
+  },
+  "environment": {
+    "python": "3.13.11",
+    "scikit_learn": "1.8.0",
+    "rasterio": "1.5.1"
+  }
+}

@@ -1,0 +1,61 @@
+model,regime,seed,auroc,f1,recall
+Logistic Regression,random,1,0.713395,0.658573,0.683733
+Logistic Regression,random,2,0.726153,0.67753,0.701221
+Logistic Regression,random,3,0.722997,0.676414,0.701162
+Logistic Regression,random,4,0.724352,0.676184,0.69721
+Logistic Regression,random,5,0.723934,0.669008,0.691739
+Logistic Regression,random,6,0.727684,0.681574,0.706626
+Logistic Regression,random,7,0.718299,0.677266,0.699826
+Logistic Regression,random,8,0.718928,0.67431,0.703938
+Logistic Regression,random,9,0.721738,0.664887,0.685106
+Logistic Regression,random,42,0.719023,0.679884,0.707919
+Logistic Regression,spatial,1,0.682668,0.612315,0.638413
+Logistic Regression,spatial,2,0.688569,0.62559,0.674746
+Logistic Regression,spatial,3,0.69457,0.609757,0.628663
+Logistic Regression,spatial,4,0.687671,0.616807,0.642139
+Logistic Regression,spatial,5,0.689543,0.61704,0.612872
+Logistic Regression,spatial,6,0.688992,0.635396,0.680893
+Logistic Regression,spatial,7,0.679141,0.613004,0.639398
+Logistic Regression,spatial,8,0.702819,0.6318,0.671257
+Logistic Regression,spatial,9,0.689735,0.616682,0.640446
+Logistic Regression,spatial,42,0.690038,0.636388,0.680893
+Random Forest,random,1,0.756948,0.697655,0.714654
+Random Forest,random,2,0.761537,0.693822,0.709292
+Random Forest,random,3,0.762926,0.694451,0.720038
+Random Forest,random,4,0.761979,0.697569,0.713368
+Random Forest,random,5,0.767743,0.706923,0.729483
+Random Forest,random,6,0.768288,0.704807,0.718723
+Random Forest,random,7,0.760745,0.702304,0.714611
+Random Forest,random,8,0.760731,0.69755,0.71743
+Random Forest,random,9,0.768112,0.70579,0.721404
+Random Forest,random,42,0.764111,0.697687,0.720023
+Random Forest,spatial,1,0.723786,0.642197,0.656758
+Random Forest,spatial,2,0.729187,0.656629,0.689123
+Random Forest,spatial,3,0.731276,0.650434,0.670111
+Random Forest,spatial,4,0.725181,0.649071,0.661089
+Random Forest,spatial,5,0.718791,0.646611,0.649164
+Random Forest,spatial,6,0.727669,0.647997,0.67723
+Random Forest,spatial,7,0.721103,0.636213,0.643976
+Random Forest,spatial,8,0.734243,0.662607,0.692185
+Random Forest,spatial,9,0.723714,0.632756,0.650293
+Random Forest,spatial,42,0.725656,0.656196,0.687733
+XGBoost,random,1,0.732936,0.670662,0.666238
+XGBoost,random,2,0.742319,0.676368,0.678349
+XGBoost,random,3,0.726731,0.682391,0.697159
+XGBoost,random,4,0.743869,0.688426,0.699935
+XGBoost,random,5,0.738543,0.680036,0.682367
+XGBoost,random,6,0.740838,0.672751,0.679708
+XGBoost,random,7,0.740784,0.678108,0.67957
+XGBoost,random,8,0.730866,0.673754,0.687802
+XGBoost,random,9,0.738239,0.675678,0.682396
+XGBoost,random,42,0.745993,0.696764,0.710607
+XGBoost,spatial,1,0.708273,0.635181,0.653474
+XGBoost,spatial,2,0.710989,0.625854,0.646428
+XGBoost,spatial,3,0.706376,0.631957,0.649969
+XGBoost,spatial,4,0.698624,0.629074,0.655731
+XGBoost,spatial,5,0.684765,0.62606,0.608409
+XGBoost,spatial,6,0.704663,0.625703,0.637321
+XGBoost,spatial,7,0.701313,0.631654,0.646703
+XGBoost,spatial,8,0.706833,0.623279,0.63355
+XGBoost,spatial,9,0.700832,0.628558,0.640069
+XGBoost,spatial,42,0.704928,0.62431,0.637286

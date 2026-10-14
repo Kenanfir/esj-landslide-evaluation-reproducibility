@@ -1,0 +1,93 @@
+{
+  "geometry_and_labels": {
+    "ls_center": {
+      "n": 743,
+      "max_abs_x_minus_geometry_m": 0.0,
+      "max_abs_y_minus_geometry_m": 0.0,
+      "lslpts_values": [
+        "TRUE"
+      ],
+      "lslpts_matches_expected": true
+    },
+    "non_ls": {
+      "n": 743,
+      "max_abs_x_minus_geometry_m": 4.995963536202908e-07,
+      "max_abs_y_minus_geometry_m": 4.986301064491272e-06,
+      "lslpts_values": [
+        "FALSE"
+      ],
+      "lslpts_matches_expected": true
+    }
+  },
+  "polygon_containment": {
+    "ls_center": {
+      "n": 743,
+      "inside_a_landslide_polygon": 721,
+      "min_distance_to_polygon_m": 0.0,
+      "median_distance_to_polygon_m": 0.0
+    },
+    "non_ls": {
+      "n": 742,
+      "inside_a_landslide_polygon": 0,
+      "min_distance_to_polygon_m": 10.94,
+      "median_distance_to_polygon_m": 940.69
+    }
+  },
+  "coordinate_collisions_between_classes": 0,
+  "predictor_direction": [
+    {
+      "feature": "slope_deg",
+      "median_landslide": 22.2,
+      "median_non_landslide": 15.2,
+      "mann_whitney_p": 3.84244648727602e-33
+    },
+    {
+      "feature": "elevation_m",
+      "median_landslide": 405.2,
+      "median_non_landslide": 364.05,
+      "mann_whitney_p": 0.02811881890442392
+    },
+    {
+      "feature": "aspect_deg",
+      "median_landslide": 121.6,
+      "median_non_landslide": 198.7,
+      "mann_whitney_p": 2.1123936997654434e-13
+    },
+    {
+      "feature": "plan_curvature",
+      "median_landslide": -0.002,
+      "median_non_landslide": 0.001,
+      "mann_whitney_p": 0.00030332521494052324
+    },
+    {
+      "feature": "profile_curvature",
+      "median_landslide": -0.001,
+      "median_non_landslide": 0.0,
+      "mann_whitney_p": 0.10596158221738215
+    },
+    {
+      "feature": "terrain_wetness_index",
+      "median_landslide": 5.16,
+      "median_non_landslide": 5.3,
+      "mann_whitney_p": 0.004814676079524881
+    },
+    {
+      "feature": "stream_power_index",
+      "median_landslide": 0.732,
+      "median_non_landslide": 0.338,
+      "mann_whitney_p": 1.9544094199625205e-23
+    },
+    {
+      "feature": "distance_to_river_m",
+      "median_landslide": 89.4,
+      "median_non_landslide": 120.4,
+      "mann_whitney_p": 1.0145162016317628e-07
+    },
+    {
+      "feature": "distance_to_road_m",
+      "median_landslide": 123.7,
+      "median_non_landslide": 120.4,
+      "mann_whitney_p": 0.7540372079831057
+    }
+  ]
+}

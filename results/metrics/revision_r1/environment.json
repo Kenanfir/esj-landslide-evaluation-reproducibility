@@ -1,0 +1,39 @@
+{
+  "generated_utc": "2026-08-31T09:15:03+00:00",
+  "script": "scripts/revision_r1_audit.py",
+  "input": "data/processed/landslide_points.csv (or its .json twin)",
+  "python": "3.13.11",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "numpy": "2.4.3",
+  "pandas": "3.0.1",
+  "scipy": "1.17.1",
+  "scikit_learn": "1.8.0",
+  "xgboost": "3.2.0",
+  "config": {
+    "java_districts": [
+      "Bogor",
+      "Cianjur",
+      "Semarang",
+      "Yogyakarta"
+    ],
+    "dedup_precision_dp": 6,
+    "identity_key": [
+      "longitude",
+      "latitude",
+      "stability",
+      "rainfall",
+      "vegetation",
+      "river_distance",
+      "slope"
+    ],
+    "n_folds": 4,
+    "seeds": [
+      42,
+      1,
+      2,
+      3,
+      4
+    ],
+    "morans_k": 8
+  }
+}

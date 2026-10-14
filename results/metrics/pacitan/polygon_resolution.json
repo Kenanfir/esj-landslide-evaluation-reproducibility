@@ -1,0 +1,54 @@
+{
+  "n_polygons": 743,
+  "pixel_size_m": 10.0,
+  "area_m2": {
+    "min": 27.18804440615254,
+    "p25": 456.3676500614864,
+    "median": 1067.8979352858826,
+    "p75": 2517.0570836753604,
+    "max": 154668.85633019963
+  },
+  "equivalent_pixels": {
+    "min": 0.2718804440615254,
+    "median": 10.678979352858825,
+    "max": 1546.6885633019963
+  },
+  "polygons_smaller_than_n_pixels": {
+    "3": {
+      "count": 118,
+      "fraction": 0.1588
+    },
+    "5": {
+      "count": 204,
+      "fraction": 0.2746
+    },
+    "10": {
+      "count": 357,
+      "fraction": 0.4805
+    }
+  },
+  "interpretation": "the published benchmarking paper reports AUROC 0.86-0.98 for strategies that draw 3, 5 or 10 random points inside each landslide polygon. Half the polygons cover fewer than 10 cells of the 10 m factor grid, so most of those points read identical covariate values and random K-fold puts copies of one record on both sides of the split. The high scores measure duplicate memorisation, not skill.",
+  "published_reference": {
+    "source": "Samodra & Nugroho, doi:10.21203/rs.3.rs-1441095/v1 (published as Artificial Intelligence in Geosciences, doi:10.1016/j.aiig.2024.100093)",
+    "strategy": "Center",
+    "cv_nonspatial_tuning": {
+      "accuracy": 0.7,
+      "kappa": 0.39,
+      "auroc": 0.74
+    },
+    "cv_llo_spatial_tuning": {
+      "accuracy": 0.69,
+      "kappa": 0.38,
+      "auroc": 0.74
+    },
+    "cv_llo_ffs_no_tuning": {
+      "accuracy": 0.7,
+      "kappa": 0.41,
+      "auroc": 0.73
+    },
+    "multi_point_strategies_auroc_range": [
+      0.86,
+      0.98
+    ]
+  }
+}

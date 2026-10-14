@@ -1,0 +1,187 @@
+{
+  "generated_utc": "2026-08-30T04:04:07+00:00",
+  "script": "scripts/build_pacitan_dataset.py",
+  "dataset": {
+    "title": "Spatial datasets for benchmarking machine learning-based landslide susceptibility models",
+    "authors": "Samodra, G., Malawani, M.N., Suhendro, I., Mardiatno, D.",
+    "article_doi": "10.1016/j.dib.2024.111155",
+    "data_doi": "10.17632/vrtx3w6mjd.1",
+    "licence": "CC BY 4.0",
+    "region": "Pacitan Regency, East Java, Indonesia",
+    "trigger_event": "Tropical Cyclone Cempaka, 27-29 November 2017",
+    "inventory_method": "743 landslide polygons manually delineated from pre- and post-event high-resolution satellite imagery and verified by field survey; centroids used as positive points; 743 random non-landslide points supplied by the depositors",
+    "factor_source": "Indonesian national DEM (DEMNAS) and topographic maps"
+  },
+  "vector_sources": {
+    "ls_center.gpkg": {
+      "layer": "ls_center",
+      "label": 1,
+      "sha256": "cb63084daa428f547edd98d732d4ac686f08c1e5f338190fc4ac1b89893fd360"
+    },
+    "non_ls.gpkg": {
+      "layer": "non_ls",
+      "label": 0,
+      "sha256": "34cd890c050c023a9043be74d09edcd76be3d46373601e740696c3b4803032c4"
+    }
+  },
+  "rasters": {
+    "slope_deg": {
+      "file": "map_slope.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        9.99999999999999,
+        9.99999999999999
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "b00d0d7fad0189ab442a208502e80c4c0b9f690d1e2aee3704f135e7b32e4cbd",
+      "missing_at_points": 0
+    },
+    "elevation_m": {
+      "file": "map_elev.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        10.0,
+        10.0
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "b8ee31145d149c49689b3d7e09c9bf21dd22d9a1e89cddd30b9c5d1251b3d533",
+      "missing_at_points": 0
+    },
+    "aspect_deg": {
+      "file": "map_aspect.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        9.99999999999999,
+        9.99999999999999
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "fe62ef6b3f6815870769434040bd318bd1e56a2473621347980692e99753ae08",
+      "missing_at_points": 0
+    },
+    "plan_curvature": {
+      "file": "map_planc.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        9.99999999999999,
+        9.99999999999999
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "80f028a03bbe1bd57a87021a289efe3a88ab56a3691730e148aa361e21f2a316",
+      "missing_at_points": 0
+    },
+    "profile_curvature": {
+      "file": "map_profc.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        9.99999999999999,
+        9.99999999999999
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "cc54941f66c595c18d99fe0bc43670b727adfad5691142f7bc66bcf4d7027429",
+      "missing_at_points": 0
+    },
+    "terrain_wetness_index": {
+      "file": "map_twi.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        9.99999999999999,
+        9.99999999999999
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "19c4266d94bf8fbe217c6d98fd6d2ac00a70e7c76b72f180b8b5d3c30e0c8d72",
+      "missing_at_points": 0
+    },
+    "stream_power_index": {
+      "file": "map_spi.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        10.0,
+        10.0
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "a408f42d0d877a34daeef6e77a3e8449e6d6021e46741e7671d1938609f30ba6",
+      "missing_at_points": 0
+    },
+    "distance_to_river_m": {
+      "file": "map_distriv.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        10.00000000000001,
+        10.00000000000001
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "a5cd339039a13b887c6dff7307672bfd7d714763ea51e358146ace2699cf9e82",
+      "missing_at_points": 0
+    },
+    "distance_to_road_m": {
+      "file": "map_distroad.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        10.00000000000001,
+        10.00000000000001
+      ],
+      "dtype": "float32",
+      "nodata": -3.4028234663852886e+38,
+      "sha256": "e9d3bf0b0a73523266f58ff411d842f6ce6e9ee50a9f04c856c20e85cb876a86",
+      "missing_at_points": 0
+    },
+    "lithology_class": {
+      "file": "map_geologi.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        10.00000000000001,
+        10.00000000000001
+      ],
+      "dtype": "int8",
+      "nodata": -128.0,
+      "sha256": "819a290c5c7f070d5a0dc4c643affdb447ebd8619dff5dad1ddfcf7ee6540f9f",
+      "missing_at_points": 1
+    },
+    "landuse_class": {
+      "file": "map_landuse.tif",
+      "crs": "EPSG:32749",
+      "resolution_m": [
+        10.00000000000001,
+        10.0
+      ],
+      "dtype": "uint8",
+      "nodata": 15.0,
+      "sha256": "534a7f395934e531da2513ffc024d7cb7852d02060d0614c595285adc2d91cb0",
+      "missing_at_points": 0
+    }
+  },
+  "rows_sampled": 1486,
+  "rows_written": 1485,
+  "rows_dropped_incomplete": 1,
+  "label_column": "landslide",
+  "categorical_columns": [
+    "landuse_class",
+    "lithology_class"
+  ],
+  "continuous_columns": [
+    "aspect_deg",
+    "distance_to_river_m",
+    "distance_to_road_m",
+    "elevation_m",
+    "plan_curvature",
+    "profile_curvature",
+    "slope_deg",
+    "stream_power_index",
+    "terrain_wetness_index"
+  ],
+  "coordinate_reference_system": "EPSG:32749 (WGS 84 / UTM zone 49S), metres",
+  "environment": {
+    "python": "3.13.11",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "rasterio": "1.5.1"
+  }
+}

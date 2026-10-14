@@ -1,0 +1,13 @@
+pool,model,regime,auroc,auroc_sd
+dedup,Logistic Regression,random,0.4928,0.0221
+dedup,Logistic Regression,spatial,0.5197,0.0
+dedup,Random Forest,random,0.5251,0.0082
+dedup,Random Forest,spatial,0.5559,0.0028
+dedup,XGBoost,random,0.5243,0.0101
+dedup,XGBoost,spatial,0.5471,0.0
+pool_1011,Logistic Regression,random,0.5309,0.0115
+pool_1011,Logistic Regression,spatial,0.5212,0.0
+pool_1011,Random Forest,random,0.9654,0.0078
+pool_1011,Random Forest,spatial,0.5909,0.0024
+pool_1011,XGBoost,random,0.9457,0.0121
+pool_1011,XGBoost,spatial,0.5637,0.0
